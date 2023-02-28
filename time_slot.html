@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Slots
+{% endblock %}
+
+{%block content%}
+<h1 class="text-center">Available Slots </h1>
+<hr>
+
+<div class="container text-center bg-light">
+
+    {% for s in slots %}
+
+
+    <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+    <p>{{s.time}}</p>
+
+
+  </div>
+</div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

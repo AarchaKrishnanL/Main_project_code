@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>Services</title>
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+{%block content%}
+<!--<h1 class="text-center">Our Doctors </h1>-->
+<!--<hr>-->
+
+<!--<div class="container text-center bg-light">-->
+
+
+
+
+<!--    <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">-->
+<!--    <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">-->
+<!--    <div class="card-body">-->
+<!--    <h5 class="card-title">{{d.doc_name}}</h5>-->
+<!--    <p class="card-text">{{d.doc_spec}}</p>-->
+<!--        <h6>{{d.ser_name}} Department</h6>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2> Our Services</h2>
+                </div>
+            </div>
+        </div>
+    {% for s in services %}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-service">
+                    <div class="service-bg service-bg-1">
+                        <h2>{{s.ser_name}}</h2>
+                    </div>
+
+                    <div class="service-text">
+                        <p>
+                            {{s.ser_description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {% endfor %}
+
+
+
+{% endblock %}
+
+
+
+
+
+a:focus { outline: 0 solid }
+img {
+max-width: 100%;
+height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0 0 15px;
+font-weight: 700;
+}
+
+html,
+body { height: 100% }
+
+body {
+background: #ddd;
+font-family: poppins;
+}
+
+a {
+-moz-transition: 0.3s;
+-o-transition: 0.3s;
+-webkit-transition: 0.3s;
+color: #333;
+}
+
+a:hover { text-decoration:none }
+
+
+.section-header{
+text-align: center;
+margin-bottom: 30px;
+margin-top: 15px;
+}
+
+.section-header p{
+font-size: 18px;
+}
+.single-service{
+border: 1px solid #ebebeb;
+text-align: center;
+background: #fff;
+}
+.service-bg{
+height: 200px;
+position: relative;
+}
+.service-bg-1{
+background: {{s.ser_images}};
+-webkit-background-size: cover;
+background-size: cover;
+background-position: center;
+}
+.service-bg-h2{
+color: #fff;
+background: tomato;
+border: 1px solid tomato;
+focus-size:17px;
+text-align: center;
+font-weight: 700;
+padding: 15px;
+position: absolute;
+left:8%;
+width: 84%;
+margin: 0;
+bottom: -25px;
+border-radius: 50px;
+letter-spacing: 2px;
+}
+
+.single-service:hover .service-bg h2{
+background: #fff;
+transition: .9s;
+color: tomato;
+}
+.service-text{
+padding: 50px 30px 20px;
+font-size: 15px;
+font-weight: 400;
+}
+.service-text p:last-child{
+margin: 0;
+line-height:1.8;
+}
+.btn-area{
+display: inline-block;
+color: #333;
+font-size: 17px;
+font-weight: 700;
+margin-top: 30px;
+text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
