@@ -1,0 +1,106 @@
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teeth Filling Service</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Basic styling for the page */
+    body {
+      background-color: #A9CCE3;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling for the header */
+    header {
+      background-color: #0077be;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Styling for the main content */
+    main {
+      margin: 20px;
+    }
+
+    /* Styling for the images */
+    img {
+      max-width: 100%;
+    }
+
+    /* Styling for the pricing table */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0077be;
+      color: #fff;
+    }
+
+    /* Styling for the features list */
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Teeth Filling Service</h1>
+  </header>
+  <main>
+    <h2>Description</h2>
+    <p>
+      Teeth filling is a common dental procedure that involves filling a cavity or hole in a tooth with a special material, such as composite resin or silver amalgam. This helps prevent further decay and damage to the tooth, and restores its shape and function. The procedure typically involves removing the decayed portion of the tooth, cleaning the area, and filling the cavity with the chosen material.
+    </p>
+      <h2>Images</h2>
+
+<img src="{% static 'images/tf1.png' %}"  width="300" height="300">
+
+<img src="{% static 'images/tf2.jpg' %}" alt="Before filling" width="300" height="300">
+
+<h2>Features</h2>
+<ul>
+  <li>Fills cavities or holes in teeth with special material</li>
+  <li>Prevents further decay and damage to the tooth</li>
+  <li>Restores the shape and function of the tooth</li>
+  <li>Procedure involves removing decayed portion of tooth, cleaning area, and filling cavity</li>
+</ul>
+
+<h2>Pricing</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Teeth Filling Service</td>
+      <td>$100 - $500 per tooth</td>
+    </tr>
+  </tbody>
+</table>
+     <div class="button2">
+      <a href="{% url 'booking' %}">
+        <button type="submit" onclick="login" name="submit" class="btn btn-warning" style="text-align: center;font-size:32px;background-color:#fcb13b; color:rgba(0, 0, 0, 0.87);padding:10px;border:none;  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);">
+              Book Your Appointment</button> </a>
+    </div>
+  </main>
+</body>
+</html>

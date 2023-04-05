@@ -1,0 +1,109 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dental Bonding Service</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    /* Basic styling for the page */
+    body {
+      background-color: #A9CCE3;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling for the header */
+    header {
+      background-color: #0077be;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Styling for the main content */
+    main {
+      margin: 20px;
+    }
+
+    /* Styling for the images */
+    img {
+      max-width: 100%;
+    }
+
+    /* Styling for the pricing table */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0077be;
+      color: #fff;
+    }
+
+    /* Styling for the features list */
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dental Bonding Service</h1>
+  </header>
+
+  <main>
+    <h2>Description</h2>
+    <p>
+      Dental bonding is a cosmetic dentistry treatment that uses a tooth-colored resin material to improve the appearance of your teeth. The resin is applied to the tooth and shaped to match the surrounding teeth, then hardened with a special light. Bonding can be used to repair chipped or cracked teeth, improve the appearance of discolored teeth, close gaps between teeth, and even change the shape of teeth.
+    </p>
+
+    <h2>Images</h2>
+
+     <img src="{% static 'images/ddd.jpg' %}"  width="300" height="300">
+
+    <img src="{% static 'images/as.jpeg' %}" alt="Before bonding" width="300" height="300">
+
+
+    <h2>Features</h2>
+    <ul>
+      <li>Can repair chipped or cracked teeth</li>
+      <li>Can improve the appearance of discolored teeth</li>
+      <li>Can close gaps between teeth</li>
+      <li>Can change the shape of teeth</li>
+    </ul>
+
+    <h2>Pricing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dental Bonding Service</td>
+          <td>$300 - $600 per tooth</td>
+        </tr>
+      </tbody>
+    </table>
+     <div class="button2">
+      <a href="{% url 'booking' %}">
+        <button type="submit" onclick="login" name="submit" class="btn btn-warning" style="text-align: center;font-size:32px;background-color:#fcb13b; color:rgba(0, 0, 0, 0.87);padding:10px;border:none;  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);">
+              Book Your Appointment</button> </a>
+    </div>
+  </main>
+</body>
+</html>

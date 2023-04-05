@@ -1,0 +1,109 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dental Crowning Service</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    /* Basic styling for the page */
+    body {
+      background-color: #A9CCE3;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling for the header */
+    header {
+      background-color: #0077be;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Styling for the main content */
+    main {
+      margin: 20px;
+    }
+
+    /* Styling for the images */
+    img {
+      max-width: 100%;
+    }
+
+    /* Styling for the pricing table */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0077be;
+      color: #fff;
+    }
+
+    /* Styling for the features list */
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dental Crowning Service</h1>
+  </header>
+
+  <main>
+    <h2>Description</h2>
+    <p>
+      Dental crowns are a common restorative dentistry treatment that can improve the appearance and function of damaged or decayed teeth. A crown is a tooth-shaped cap that is placed over a damaged tooth to restore its shape, size, and strength. It can also be used to cover a dental implant or hold a bridge in place. Crowns are made of various materials, including porcelain, metal, and ceramic, and can be customized to match the color and shape of your natural teeth.
+    </p>
+
+    <h2>Images</h2>
+
+     <img src="{% static 'images/dc1.jpg' %}"  width="400" height="300">
+
+    <img src="{% static 'images/dc2.jpg' %}" alt="Before bonding" width="300" height="300">
+
+
+    <h2>Features</h2>
+    <ul>
+      <li>Customized to match the color and shape of your natural teeth</li>
+      <li>Can improve the appearance and function of damaged or decayed teeth</li>
+      <li>Can be used to cover a dental implant or hold a bridge in place</li>
+      <li>Made of various materials, including porcelain, metal, and ceramic</li>
+    </ul>
+
+    <h2>Pricing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dental Crowning Service</td>
+          <td>$1,000 - $3,500 per tooth</td>
+        </tr>
+      </tbody>
+    </table>
+     <div class="button2">
+      <a href="{% url 'booking' %}">
+        <button type="submit" onclick="login" name="submit" class="btn btn-warning" style="text-align: center;font-size:32px;background-color:#fcb13b; color:rgba(0, 0, 0, 0.87);padding:10px;border:none;  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);">
+              Book Your Appointment</button> </a>
+    </div>
+  </main>
+</body>
+</html>

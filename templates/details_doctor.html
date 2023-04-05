@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+   <div class="col-sm-4">
+   <h4 class="text-center alert alert-info">Add Details</h4>
+<form action="" method="POST">
+   {% csrf_token %}
+   {{form.as_p}}
+   <input type="submit" class="btn btn-success" value="Add">
+</form>
+   </div>
+
+   <div class="col-sm-7 offset-1">
+      <h4 class="text-center alert alert-info">Show Details</h4>
+      {% if doctordetails %}
+     <table class="table table-hover">
+       <thead>
+       <tr>
+          <th scope="col">Gender</th>
+          <th scope="col">Age</th>
+          <th scope="col">Address</th>
+          <th scope="col">Year of Experience</th>
+           <th scope="col">ACTION</th>
+       </tr>
+       </thead>
+         <tbody>
+         {% for d in doctordetails %}
+         <tr>
+             <th scope="row">{{d.gender}}</th>
+             <th>{{d.age}}</th>
+             <th>{{d.address}}</th>
+             <th>{{d.year_of_experience}}</th>
+             <td><a href="{% url 'update_doctor'  d.id %}" class="btn btn-warning btn-sm">Edit</a> </td>
+         </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+
+        {% else %}
+      <h4 class="text-center alert alert-info"></h4>
+        {% endif %}
+   </div>
+   </div>
+{% endblock %}

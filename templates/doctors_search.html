@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Doctors
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Our Doctors </h1>
+<hr>
+
+<div class="container">
+  <form class="form-inline my-3" method="GET">
+    <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" value="{{query}}">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  {% if query %}
+    <p>Search results for "{{query}}": {{doctors.count}} found</p>
+  {% endif %}
+  <div class="row">
+    {% for d in doctors %}
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{d.doc_name}}</h5>
+          <p class="card-text">{{d.doc_spec}}</p>
+          <h6>{{d.ser_name}} Department</h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

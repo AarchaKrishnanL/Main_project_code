@@ -1,0 +1,31 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>successfull</title>
+</head>
+<body>
+<div class="happy">
+<h1>Details Successfully Added</h1>
+            <br>
+            <a href="{% url 'index' %}">
+              <button type="submit" onclick="login" name="submit" class="btn btn-warning">
+              Home</button> </a>
+</div>
+</body>
+</html>
+<style>
+  .happy{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("{% static 'images/deback.jpg' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Sriracha';
+  }
+
+</style>

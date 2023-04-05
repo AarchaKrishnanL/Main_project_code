@@ -1,0 +1,395 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <title>Dental Clinic</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+{%block content%}
+<div class="banner">
+  <font size="50" color="black" >SMILE DENTAL CLINIC</font>
+<!--  <font size="6" color="white" >#No Filter for Your Smile.</font>-->
+</div>
+<div class="banner1">
+  <font size="50" color="black" >Dental Consultation Form</font>
+</div>
+ <form action="" method="POST">
+
+         {% csrf_token %}
+<div class="content">
+    <div class="details">
+        <h1>Personal Details</h1>
+        <div class="fields1">
+        <label>Gender:</label>
+  <select name="gender">
+    <option value="">Please select</option>
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+    <option value="other">Other</option>
+  </select>
+            <label>Blood Group:</label>
+  <select name="gender">
+    <option value="">Please select</option>
+      <option value="female">O+</option>
+    <option value="male">A+</option>
+    <option value="female">B+</option>
+    <option value="male">AB+</option>
+    <option value="other">O-</option>
+      <option value="female">A-</option>
+    <option value="male">B-</option>
+    <option value="other">AB-</option>
+  </select>
+            <label>Date Of Birth:</label>
+      <input type="datetime-local" id="Test_DatetimeLocal">
+        </div>
+
+
+
+
+        <div class="med_history">
+        <h1>Past Medical History</h1>
+        <div class="fields1">
+        <label>Previous Report:</label>
+   <input type="file" id="myFile" name="filename">
+ <br>
+<div class="form-check">
+    <label>Do you take any of the following health/dietry supplements?</label><br>
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Multivitamin
+  </label>
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+    <label class="form-check-label" for="defaultCheck2">
+    Omega3
+  </label>
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+    <label class="form-check-label" for="defaultCheck3">
+    Vitamin3
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+    <label class="form-check-label" for="defaultCheck4">
+    BComplex
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+    <label class="form-check-label" for="defaultCheck5">
+    Vitamin D/D3
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+    <label class="form-check-label" for="defaultCheck6">
+    Zinc
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+    <label class="form-check-label" for="defaultCheck7">
+    Folic Acid
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+    <label class="form-check-label" for="defaultCheck8">
+    Melatonin
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+    <label class="form-check-label" for="defaultCheck9">
+    Biotin
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+    <label class="form-check-label" for="defaultCheck10">
+    Coenzyme
+  </label>
+         <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+    <label class="form-check-label" for="defaultCheck11">
+    Other
+  </label>
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+    <label class="form-check-label" for="defaultCheck12">
+    None
+  </label>
+        <div class="form-group">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="If Other,please Specify">
+  </div>
+</div>
+        </div>
+        </div>
+<div class="gen_health">
+        <h1>General Health</h1>
+        <div class="fields2">
+        <div class="form-check">
+    <label>Have you ever experienced any of these health conditions in the past or present?</label>
+            <br>
+  <input class="form-check-input" type="checkbox"   value="" id="defaultChecks1">
+  <label class="form-check-label" for="defaultChecks1" >
+    Hormone Imbalance
+  </label>
+
+    <input class="form-check-input" type="checkbox" value="" id="defaultChecks2">
+    <label class="form-check-label" for="defaultChecks2">
+    Asthma
+  </label>
+
+    <input class="form-check-input" type="checkbox" value="" id="defaultChecks3">
+    <label class="form-check-label" for="defaultChecks3">
+    Cancer/Systemic disease
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks4">
+    <label class="form-check-label" for="defaultChecks4">
+    Epilepsy/Seizure
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks5">
+    <label class="form-check-label" for="defaultChecks5">
+    High Blood Pressure
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks6">
+    <label class="form-check-label" for="defaultChecks6">
+    Diabetes
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks7">
+    <label class="form-check-label" for="defaultChecks7">
+    Heart Problems
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks8">
+    <label class="form-check-label" for="defaultChecks8">
+    HIV/AIDS
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks9">
+    <label class="form-check-label" for="defaultChecks9">
+    Auto immune Disorder
+  </label>
+        <input class="form-check-input" type="checkbox" value="" id="defaultChecks10">
+    <label class="form-check-label" for="defaultChecks10">
+    Depression
+  </label>
+               <input class="form-check-input" type="checkbox" value="" id="defaultChecks11">
+    <label class="form-check-label" for="defaultChecks11">
+    HeadAches/Migrations
+  </label>
+         <input class="form-check-input" type="checkbox" value="" id="defaultChecks12">
+    <label class="form-check-label" for="defaultChecks12">
+    Other
+  </label>
+               <input class="form-check-input" type="checkbox" value="" id="defaultChecks13">
+    <label class="form-check-label" for="defaultChecks13">
+    None
+  </label>
+        <div class="form-group1">
+    <input type="text" class="form-control" id="exampleFormContrlInput2" placeholder="If Other,please Specify">
+  </div>
+        </div>
+        </div></div>
+<br>
+            <div class="form-check">
+  <label>Have any Allegies?</label>
+  <br>
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks01">
+  <label class="form-check-label" for="defaultChecks01">Aspirin</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks02">
+  <label class="form-check-label" for="defaultChecks02">Shellfish</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks03">
+  <label class="form-check-label" for="defaultChecks03">Tree Nuts</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks04">
+  <label class="form-check-label" for="defaultChecks04">Iodine</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks05">
+  <label class="form-check-label" for="defaultChecks05">Latex</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks06">
+  <label class="form-check-label" for="defaultChecks06">Dairy</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks07">
+  <label class="form-check-label" for="defaultChecks07">Fruits</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks08">
+  <label class="form-check-label" for="defaultChecks08">Vegetables</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks09">
+  <label class="form-check-label" for="defaultChecks09">Other</label>
+
+  <input class="form-check-input" type="checkbox" value="" id="defaultChecks010">
+  <label class="form-check-label" for="defaultChecks010">None</label>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="If Other, please Specify">
+  </div>
+</div>
+            <br>
+            <div class="form-checkk">
+                <label>Are you a smoker?</label><br>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Yes
+  </label>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    No
+  </label>
+</div>
+            <br>
+  <div class="form-chek">
+                <label>Do you drink more than 4 caffeinated beverages a day?</label><br>
+  <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios3">
+    Yes
+  </label>
+
+  <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadio4" value="option2">
+  <label class="form-check-label" for="exampleRadio4">
+    No
+  </label>
+</div>
+            <br>
+              <div class="form-chek">
+                <label>Have you ever experienced claustrophobic?</label><br>
+  <input class="form-check-input" type="radio" name="exampleRadio5" id="exampleRadio5" value="option1" checked>
+  <label class="form-check-label" for="exampleRadio5">
+    Yes
+  </label>
+  <input class="form-check-input" type="radio" name="exampleRadio5" id="exampleRadio6" value="option2">
+  <label class="form-check-label" for="exampleRadio6">
+    No
+  </label>
+</div>
+            <br>
+                          <div class="form-chek">
+                <label>Rate your tolerence in pain?</label><br>
+  <input class="form-check-input" type="radio" name="exampleRadio8" id="exampleRadio7" value="option1" checked>
+  <label class="form-check-label" for="exampleRadio7">
+    Low
+  </label>
+  <input class="form-check-input" type="radio" name="exampleRadio8" id="exampleRadio8" value="option2">
+  <label class="form-check-label" for="exampleRadio8">
+    Medium
+  </label>
+    <input class="form-check-input" type="radio" name="exampleRadio8" id="exampleRadio9" value="option3">
+  <label class="form-check-label" for="exampleRadio9">
+    High
+  </label>
+                          </div>
+            <br>
+            <div class="image">
+            <label class="form-label" for="customFile">Upload your Dental photos</label>
+                <input type="file" class="form-control" id="customFile" />
+                <br>
+                <input type="file" class="form-control" id="customFile1" />
+                <br>
+                <input type="file" class="form-control" id="customFile2" />
+                </div>
+</div>
+    </div>
+            <br>
+    <div class="button">
+            <a href="{% url 'details_successfull' %}">
+              <button type="submit" name="submit" class="btn btn-warning">
+              SUBMIT FORM</button> </a>
+        </div>
+</form>
+</html>
+
+
+<!-- <div class="container w-50 text-center p-3 my-5 bg-info">-->
+<!--        <form action="" method="POST">-->
+
+<!--         {% csrf_token %}-->
+<!--         {{form|crispy}}-->
+<!--        <br>-->
+
+<!--         <button class="btn btn-primary mb-4" type="submit">Submit</button>-->
+<!--    </form>-->
+<!--</div>-->
+{% endblock content%}
+
+
+<style>
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-image: url("{% static 'images/deback.jpg' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Sriracha';
+}
+.banner1 {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Sriracha';
+}
+.content {
+  display: flex;
+  text-align: left;
+  width: 100%;
+  height: 1550px;
+  background-color: #CFF6FF;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'sans serif';
+    }
+    .details {
+         display: flex;
+
+        display: block;
+        font-size: 1.5em;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+h1:after {
+    content:' ';
+    display:block;
+    border:2px solid #000000;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+fields1 {
+  margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 15px;
+}
+fields2 {
+  margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+
+         padding-right:100px;
+}
+
+gen_health{
+ display: flex;
+        text-align: center;
+        display: block;
+        font-size: 1.5em;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        }
+
+.form-check-input {
+  margin-right: 20px;
+}
+
+</style>
+
+
